@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity"
+	prefHeight="396.0" prefWidth="834.0"
+	style="-fx-background-color: #1f2121;"
+	xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="pidev.gui.LoginController">
+	<children>
+		<AnchorPane layoutX="446.0" layoutY="13.0"
+			prefHeight="370.0" prefWidth="348.0"
+			style="-fx-background-color: #1f2121;">
+			<children>
+				<TextField fx:id="email" layoutX="17.0" layoutY="100.0"
+					prefHeight="26.0" prefWidth="311.0" />
+				<Label layoutX="101.0" layoutY="26.0" text="Se connecter ? "
+					textFill="#fcfcfc">
+					<font>
+						<Font name="System Bold" size="23.0" />
+					</font>
+				</Label>
+				<Label layoutX="17.0" layoutY="67.0" text="Email :"
+					textFill="#f4f4f4">
+					<font>
+						<Font size="16.0" />
+					</font>
+				</Label>
+				<Label layoutX="17.0" layoutY="139.0" text="Mot de passe :"
+					textFill="WHITE">
+					<font>
+						<Font size="16.0" />
+					</font>
+				</Label>
+				<Button fx:id="btnConnexion" layoutX="115.0" layoutY="247.0"
+					mnemonicParsing="false" onAction="#authenticate" prefHeight="26.0"
+					prefWidth="133.0" style="-fx-background-color: white;"
+					text="Connexion" textAlignment="CENTER">
+					<effect>
+						<DropShadow blurType="ONE_PASS_BOX" height="9.3"
+							radius="7.075" spread="0.06">
+							<color>
+								<Color red="0.8105263113975525" green="0.7805068492889404"
+									blue="0.7805068492889404" />
+							</color>
+						</DropShadow>
+					</effect>
+					<font>
+						<Font size="16.0" />
+					</font>
+					<cursor>
+						<Cursor fx:constant="HAND" />
+					</cursor>
+				</Button>
+				<Label fx:id="labelMessageAuth" layoutX="22.0" layoutY="314.0"
+					prefHeight="34.0" prefWidth="311.0" textAlignment="CENTER"
+					textFill="#e72020">
+					<font>
+						<Font name="System Italic" size="14.0" />
+					</font>
+				</Label>
+				<PasswordField fx:id="password" layoutX="17.0"
+					layoutY="172.0" prefHeight="26.0" prefWidth="311.0" />
+			</children>
+		</AnchorPane>
+		<AnchorPane layoutY="1.0" prefHeight="392.0"
+			prefWidth="427.0">
+			<children>
+				<ImageView fitHeight="394.0" fitWidth="427.0"
+					layoutX="1.0" opacity="0.27" pickOnBounds="true">
+					<image>
+						<Image url="@image/work.jpg" />
+					</image>
+				</ImageView>
+				<Label layoutX="22.0" layoutY="112.0" text="Bienvenue sur "
+					textFill="#f4f2f2">
+					<font>
+						<Font name="System Bold" size="25.0" />
+					</font>
+				</Label>
+				<Label layoutX="22.0" layoutY="159.0" text="Pidev FULL">
+					<font>
+						<Font name="System Bold" size="48.0" />
+					</font>
+					<textFill>
+						<LinearGradient endX="1.0" endY="1.0"
+							startX="0.3636363555084576">
+							<stops>
+								<Stop>
+									<color>
+										<Color red="0.4736842215061188"
+											green="0.4684210419654846" blue="0.4684210419654846" />
+									</color>
+								</Stop>
+								<Stop offset="1.0">
+									<color>
+										<Color red="1.0" green="1.0" blue="1.0" />
+									</color>
+								</Stop>
+							</stops>
+						</LinearGradient>
+					</textFill>
+				</Label>
+			</children>
+		</AnchorPane>
+	</children>
+</AnchorPane>
